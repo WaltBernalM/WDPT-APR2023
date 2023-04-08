@@ -1,0 +1,87 @@
+/* 3 tipos de selectores
+por etiqueta -> afectan a todas las etiquetas
+por clase .  -> afectan a todas las etiquetas que tengan esa clase
+por id # -> afecta solo al elemento que tiene ese id
+para posicionar:
+el padre debe de ser: relative
+y para poder mover el hijo acorde a su papa directo debe de ser: absolute
+*/
+
+
+html {
+    max-height: 100vh;
+    max-width: 10vw;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+  }
+  
+  nav {
+    position: fixed;
+    background-color: tomato;
+  }
+  
+  span {
+    font-size: large;
+  }
+  
+  #center {
+    position: relative;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  #content {
+    position: absolute;
+    padding: 10px;
+    top: 50px;
+    left: 30px;
+    box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.16);
+  }
+  
+  .options {
+    padding: 0px;
+  }
+  
+  fieldset {
+    border: none;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0px;
+  }
+  
+
+  
+  .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 0 -100px;
+    width: 100%;
+    background-color: tomato;
+    color: white;
+    text-align: center;
+  }
+
+
+  button {
+    margin-left: 100px;
+    border: none;
+    color: white;
+    border-radius: 20%;
+    background: tomato;
+  }
+
+
+  button:hover {
+    background-color:black;
+  }
+
+  button:active{
+    background-color: chartreuse;
+  }
