@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .flexbox-container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        background-color: purple;
+        color: white;
+        height: 400px;
+       } 
+       .flex-item {
+        background-color: tomato;
+        margin: 8px;
+       }
+
+       .second {
+        align-self: flex-end;
+       }
+
+    </style>
+</head>
+<body>
+    <!-- emec -->
+    <h1>Hola</h1>
+    <section class="flexbox-container">
+        <article class="flex-item first">Flex Item 1</article>
+        <article class="flex-item second">Flex Item 2</article>
+        <article class="flex-item third">Flex Item 3</article>
+    </section>
+</body>
+</html>
