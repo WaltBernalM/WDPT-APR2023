@@ -25,7 +25,13 @@ const generateTemplateItem = todo => {
 
 addForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const todo = addForm.add.value;//.trim();
+    // Nota: addForm.add.value es la version corta de:
+    // addForm.elements.add.value
+    // elements (https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements#examples)
+    // nos da todos los form controls que hay dentro del form
+    // y podemos acceder usando el "name" del elemento (add en nuestro caso)
+    // const todo = addForm.add.value;//.trim();
+    const todo = addForm.elements.add.value;//.trim();
     generateTemplateItem(todo);
     addForm.reset(); // reset limpia todos los imputs de un form
 
