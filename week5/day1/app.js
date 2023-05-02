@@ -46,7 +46,8 @@ list.addEventListener('click', e => {
         // e.target nos da el elemento que genero el evento
         // 👇
         e.target.parentElement.remove();
-
+      //              👆
+      // tomamos al padre porque es el elemento que debemos eliminar
         console.log(e.target.classList)
     }
 })
