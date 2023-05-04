@@ -14,7 +14,7 @@ const backgroundImage = {
     speed: -1,
     draw: () => {
         //Aca deseamos una función que mueva x pixeles a la izquierda a el background
-
+        this.x--;
         // cuando la imagen se salga del canvas, inicializar la posicion en 0
     }
 }
