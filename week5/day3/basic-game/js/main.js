@@ -108,6 +108,13 @@ window.onload = () => {
 
 
 
+// Posibles mejoras
+
+// Eliminar los hielos una vez que salieron de la pantalla
+// Agregar sonido para las colisiones y musica de fondo
+
+
+
 
 
 
