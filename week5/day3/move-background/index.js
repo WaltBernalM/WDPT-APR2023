@@ -34,7 +34,10 @@ function updateCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     // 2. pintar el background en la nueva posicion
     backgroundImage.draw();
+    requestAnimationFrame(updateCanvas)
 }
 
+updateCanvas()
+// setInterval(updateCanvas, 1000/60)
 
-setInterval(updateCanvas, 1000/60)
+// requestAnimationFrame
