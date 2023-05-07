@@ -28,13 +28,14 @@ function createForm(inputs) {
     // 3. Añadimos un elemento dentro de otro usando  appendChild
     main.appendChild(form);
     // 4.
-    inputs.forEach(input => {
+    inputs.forEach(inputName => {
         // const input = document.createElement('input');
-        // input.setAttribute('placeholder', input);
-        // input.setAttribute('class', form-group);
+        // input.setAttribute('placeholder', inputName);
+        // input.setAttribute('class', 'form-group');
+        // form.appendChild(input);
         form.innerHTML += `
-         <label>${input}: </label>
-         <input type="text" class="form-group" placeholder="${input}"/>
+         <label>${inputName}: </label>
+         <input type="text" class="form-group" placeholder="${inputName}"/>
         `
     })
 }
