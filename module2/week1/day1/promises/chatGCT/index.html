@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>chatGCT (El Gran ClarividenTe)</h1>
+        <h3>Por tan solo 0.01 ETH conoce todas las respuestas a tu vida</h3>
+        <form>
+          <div>
+            <!-- <label for="name">Escribe el nombre de tu amor </label> -->
+            <input id="input-field" placeholder="Su nombre" type="text" required="required"/>
+          </div>
+          <div>
+            <button type="submit">Dime que debo hacer!!</button>
+          </div>
+        </form>
+
+        <h2 id="prediction"></h2>
+      </div>
+      
+      <script>
+        const form = document.querySelector('form');
+        const prediction = document.querySelector('#prediction');
+        prediction.style.display='none';
+      </script>
+      <script src="basic-promise.js"></script>
+</body>
+</html>

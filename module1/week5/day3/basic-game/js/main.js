@@ -114,7 +114,3 @@ window.onload = () => {
 // Agregar sonido para las colisiones y musica de fondo
 
 
-
-
-
-
