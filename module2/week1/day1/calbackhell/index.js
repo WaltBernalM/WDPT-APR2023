@@ -40,12 +40,12 @@ const instructions = {
 // .then(() => console.log('has llegado a tu destino!'))
 // .catch(error => console.error(error))
 
-// getDirections(1)
-// .then(() => getDirections(2))
-// .then(() => getDirections(3))
-// .then(() => getDirections(4))
-// .then(() => console.log('has llegado a tu destino!'))
-// .catch(error => console.error(error))
+getDirections(1)
+.then(() => getDirections(2))
+.then(() => getDirections(3))
+.then(() => getDirections(4))
+.then(() => console.log('has llegado a tu destino!'))
+.catch(error => console.error(error))
 
 
 // Async - Await

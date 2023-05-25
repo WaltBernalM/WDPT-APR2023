@@ -1,0 +1,18 @@
+{
+  "name": "node-project-example",
+  "version": "1.0.0",
+  "description": "esto es un ejemplo basico de un projecto de node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "mocha": "^10.2.0"
+  }
+}
