@@ -1,0 +1,95 @@
+:root {
+    --bg: #212121;
+    --color1: #e91e63;
+    --color2: #004e89;
+    --invalid: #b71c1c;
+    --valid: #43a047;
+  }
+  body {
+    display: grid;
+    height: 100vh;
+    padding: 1rem 2rem;
+    background: var(--bg);
+    color: #fff;
+  }
+  .wrapper {
+    margin: auto;
+  }
+  form {
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+  }
+  form div {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  form div label {
+    width: 60px;
+  }
+  form div input {
+    position: relative;
+    width: 200px;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    border: none;
+  }
+  form div button {
+    width: 100%;
+    border: none;
+    background-image: linear-gradient(45deg, var(--color1), var(--color2));
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    color: #fff;
+  }
+  a {
+    color: #fff;
+
+  }
+  form div:after {
+    content: '';
+    display: block;
+    width: 2rem;
+    margin-left: -0.4rem;
+    padding-left: 0.4rem;
+    line-height: 1.95rem;
+    text-align: center;
+    border-radius: 0 0.4rem 0.4rem 0;
+  }
+  form div:has(input:invalid):after {
+    content: '⨉';
+    background: var(--invalid);
+  }
+  form div:has(input:valid):after {
+    content: '✔';
+    background: var(--valid);
+  }
+  form div:has(input:placeholder-shown):after {
+    content: '';
+  }
+  form:has(input:invalid) button {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  form:has(input:invalid) button:hover {
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .image {
+    display: flex;
+    justify-content: center;
+  }
