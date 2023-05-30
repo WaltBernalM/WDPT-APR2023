@@ -57,3 +57,85 @@ find nos da acceso a la query bar
 ```
 db.movies.find({ title: "Interstellar" })
 ```
+
+### Projections
+
+* Projection
+En el GUI
+```
+{ _id: 0,  title: 1, year: 1, rate: 1  }
+```
+En el CLI
+
+```
+db.movies.find({ title: "Interstellar" }, { _id: 0,  title: 1, year: 1, rate: 1  })
+```
+
+```sh
+db.movies.find({ title: "Interstellar" }).projection({ _id: 0,  title: 1, year: 1, rate: 1  })
+```
+
+* sort
+```
+db.movies.find().projection({ _id: 0,  title: 1, year: 1, rate: 1  }).sort({ year: -1, rate: -1  })
+```
+
+
+## Anatomia de una Query
+
+```js
+//campo sobre el que hacemos la query
+// |
+{ field: { $op:  value } }
+//          |       |
+//      operador  valor
+```
+
+* `$eq`
+
+```sh
+{ title: { $eq: "Interstellar" } }
+```
+
+* `$ne`
+
+```sh
+{ title: { $ne: "Interstellar" } }
+```
+
+* `$and`
+
+```
+{ $and: [{ year: "2000" }, { rate: "8.5" }] }
+```
+
+```
+{ year: "2000"  ,  rate: "8.5" }
+```
+
+* `$or`
+
+{ $or: [{ year: "2000" }, {rate: "8.5" }]}
+
+* Rango `$gt` y `$lt`
+
+```
+{ year: { $gt: "1990", $lt: "2000"  }}
+```
+
+
+## Array queires
+
+* `$in`
+
+```
+{ genre: { $in: [ "Horror" ] } }
+```
+
+
+## queires en elementos
+
+
+```
+{ cost: { $exists: true } }
+```
