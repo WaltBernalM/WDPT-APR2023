@@ -1,0 +1,28 @@
+<h1>Spotichaf</h1>
+
+{{!-- El tag form tiene tres propiedades: enctype, action y method --}}
+{{!-- enctype: se usa para enviar archivos --}}
+{{!-- action: ruta a donde enviar la info --}}
+{{!--     | method: verbo a usar --}}
+{{!--     |              |      --}}
+<form action="/search", method="GET">
+    <label for="">
+        Artist:
+        <input type="text" name="artist">
+    </label>
+
+
+    <label for="">
+        Album:
+        <input type="text" name="album">
+    </label>
+
+
+    <label for="">
+        Genres:
+        <input type="text" name="genre">
+    </label>
+
+
+    <button type="submit">Search</button>
+</form>
