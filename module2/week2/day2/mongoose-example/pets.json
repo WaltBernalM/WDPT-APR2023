@@ -1,0 +1,32 @@
+[{
+    "type": "cat",
+    "breed": "Pop-tart",
+    "weight": 1,
+    "gender": "female",
+    "name": "nyan",
+    "isAvailable": false
+},
+{
+    "type": "cat",
+    "breed": "American shorthair",
+    "weight": 3,
+    "gender": "male",
+    "name": "salem",
+    "isAvailable": false
+},
+{
+    "type": "tucan",
+    "breed": "unknown",
+    "weight": 3,
+    "gender": "male",
+    "name": "sam",
+    "isAvailable": true
+},
+{
+    "type": "turtle",
+    "breed": "Red-eared slider",
+    "weight": 0.3,
+    "gender": "female",
+    "name": "cathy",
+    "isAvailable": false
+}]
