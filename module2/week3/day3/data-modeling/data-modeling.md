@@ -14,11 +14,12 @@ ej de relaciones uno a uno:
    expiration_date: '2030'
 }
 
-// passaport
+// user
 {
-   patron_id: ObjectId("u1"),
+   _id: ObjectId("u1"),
    name: 'Roberto',
-   age: 30
+   age: 30,
+   passport_id: ObjectId("p1")
 }
 ```
 
@@ -26,7 +27,7 @@ esta relacion uno-a-uno usando `embedded documents`:
 
 ```js
 {
-   patron_id: ObjectId("u1"),
+   _id: ObjectId("u1"),
    name: 'Roberto',
    age: 30,
    passport: {
@@ -89,7 +90,20 @@ como resolverian el problema usando `embeddings`?
    _id: ObjectId("u1"),
    name: 'Roberto',
    age: 30,
-   passports://...?
+   passports: [
+      {
+         _id: ObjectId("p1"),
+         name: "pasaporte mexicano",
+         pass_number: '123',
+         expiration_date: '2030',
+      },
+      {
+         _id: ObjectId("p2"),
+         name: "pasaporte español",
+         pass_number: '321',
+         expiration_date: '2035',
+      }
+   ]
 }
 
 ```
