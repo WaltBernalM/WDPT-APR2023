@@ -19,6 +19,7 @@ userRouter.post('/signup', async (req, res) => {
     // 1. Darle feedback al usuario de que no puede registrar un correo que ya
     // fue registrado
 
+    // si no lo encuentra devuelve null
     const userFound = await User.findOne({ username: userData.username, email: userData.email  })
 
     console.log('userFound: ', userFound);
