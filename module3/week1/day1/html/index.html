@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Load Babel - used to parse JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- React's core library-->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- ReactDOM library renders the content created with React to the DOM. -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+
+    <h1 class="title">Super app increibkle que solo necesita un poco de react para darle sabor</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi corrupti repellendus quam eum, dolor corporis doloribus officia non magnam exercitationem. Error neque unde illum optio et facilis ullam? Optio, illo.</p>
+
+    <div id="root"></div>
+
+
+
+    <form action="">
+        <label for="">
+            name    
+            <input type="text">
+        </label>
+    </form>
+
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+
+        const App = () => {
+            return (
+                <div>
+                    <h1 className="container">Hola React!</h1>
+                    <p>React es una libreria de frontend de javascript</p>
+                </div>
+            )
+        }
+
+        // Lo que renderizamos es un componente escrito en un lenguage llamado JSX
+        root.render(<App/>)
+
+    </script>
+
+
+</body>
+</html>
