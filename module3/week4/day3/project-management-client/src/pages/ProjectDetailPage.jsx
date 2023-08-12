@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { API_URL } from "../utils/constants";
 import axios from "axios";
+import AddTask from "./AddTask";
 
 const ProjectDetailPage = () => {
     const [ project, setProject ] = useState(null)
@@ -30,16 +31,23 @@ const ProjectDetailPage = () => {
                 )
             }
 
-            {
-                project &&
-                project.tasks.map(task => (
-                    <div className="TaskCard card">
-                        <h3>{task.title}</h3>
-                        <h4>Description: </h4>
-                        <p>{task.description}</p>
-                    </div>
-                ))
-            }
+            <div className="projects-row">
+                <div className="projects-col">
+                    <AddTask projectId={projectId} getOneProject={getOneProject}/>
+                </div>
+                <div className="projects-col">
+                {
+                    project &&
+                    project.tasks.map(task => (
+                        <div className="TaskCard card">
+                            <h3>{task.title}</h3>
+                            <h4>Description: </h4>
+                            <p>{task.description}</p>
+                        </div>
+                    ))
+                }
+                </div>
+            </div>
 
             <Link to="/projects">
                 <button>Back to projects</button>
