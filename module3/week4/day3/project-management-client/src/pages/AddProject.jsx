@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
 import { API_URL } from "../utils/constants";
-import { useNavigate } from "react-router-dom";
 
 const initProjectForm = {
     title: '',
@@ -11,7 +10,6 @@ const initProjectForm = {
 const AddProject = (props) => {
 
     const [ projectStateForm, setProjectStateForm ] = useState(initProjectForm);
-    const navigate = useNavigate()
 
     const updateProjectForm = (nameField, value) => {
         // // paso 1, hacer una copia de la variable de estado setProjectStateForm
