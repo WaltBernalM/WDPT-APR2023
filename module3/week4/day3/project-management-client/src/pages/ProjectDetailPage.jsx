@@ -20,6 +20,10 @@ const ProjectDetailPage = () => {
     }, [])
 
 
+    const deleteTask = async (taskId) => {
+        await axios.delete(`${API_URL}/api/tasks/${taskId}`)
+        getOneProject()
+    }
     return (
         <div className="ProjectDetails">
             {
@@ -43,6 +47,12 @@ const ProjectDetailPage = () => {
                             <h3>{task.title}</h3>
                             <h4>Description: </h4>
                             <p>{task.description}</p>
+
+                            <input 
+                                type="submit" 
+                                value="Delete Task" 
+                                onClick={() => deleteTask(task._id)}
+                            />
                         </div>
                     ))
                 }

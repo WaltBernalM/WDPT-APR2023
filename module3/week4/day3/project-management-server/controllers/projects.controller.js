@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Project = require('../models/Project.model');
+const Task = require('../models/Task.model')
 
 const getAllProjects = async (req, res, next) => {
     try {
@@ -66,7 +67,13 @@ const deleteProject = async (req, res, next) => {
             return
         }
 
-        await Project.findByIdAndRemove(projectsId)
+        // const tasks = (await Project.findById(projectsId)).tasks
+
+        const tasks = (await Project.findByIdAndRemove(projectsId)).tasks
+        console.log('tasks: ',tasks);
+        for (const taskId of tasks) {
+            await Task.findByIdAndRemove(taskId)
+        }
         res.status(200).json({ message: `El proyecto con id ${projectsId} fue eliminado con exito` })
     } catch (error) {
         res.status(500).json(error)

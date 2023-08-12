@@ -16,6 +16,19 @@ const createTask = async (req, res, next) => {
         res.status(500).json(error)        
     }
 }
+
+
+const deleteTask = async(req, res, next) => {
+    const { taskId } = req.params;
+    try {
+        await Task.findByIdAndRemove(taskId)
+        res.status(200).json({ message: `The task with id ${taskId} was deleted` })
+    } catch (error) {
+        res.status(500).json(error)    
+    }
+}
+
 module.exports = {
-    createTask
+    createTask,
+    deleteTask
 }
