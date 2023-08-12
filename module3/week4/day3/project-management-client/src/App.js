@@ -1,0 +1,22 @@
+import './App.css';
+import Navbar from './components/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import ProjectList from './pages/ProjectList';
+import ProjectDetailPage from './pages/ProjectDetailPage';
+import AddProject from './pages/AddProject';
+
+function App() {
+  return (
+    <div className="App">
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path="/projects" element={<ProjectList/>}/>
+        <Route path="/projects/:projectId" element={<ProjectDetailPage/>} />
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
