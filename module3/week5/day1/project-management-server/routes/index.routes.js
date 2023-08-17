@@ -7,7 +7,6 @@ const tasksRouter = require('./tasks.routes')
 // * JSON
 // * protobuffers
 
-
 router.use('/projects', isAuthenticated, projectsRouter)
 router.use('/tasks', isAuthenticated, tasksRouter)
 
