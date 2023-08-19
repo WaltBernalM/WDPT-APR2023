@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="handleClick(e)">Cliqueame, yo no tengo nada que ver con react</button>
+    </div>
+
+    <div onmousemove="handleMouseMove(e)" style="width: 100%; height: 30px; background: red;" >
+
+    </div>
+    <script>
+        function handleClick(e) {
+            console.log('clickeaste el boton!', e)
+        }
+
+        function handleMouseMove(e) {
+            console.log('estas moviendo el cursor dentro de esta etiqueta!!!!!!!!!!')
+        }
+    </script>
+</body>
+</html>

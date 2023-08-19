@@ -1,0 +1,78 @@
+{{!-- {{#with pet}} --}}
+    <div class="container">
+      <div class="container-image">
+        <figure class="image is-4by3">
+          <img src="{{pet.picture}}" alt="pet picture" width="500">
+        </figure>
+      </div>
+      <form class="update-form" action="/pet/{{pet._id}}/update" method="POST">
+        <div class="container-content">
+
+          {{#if isUpdate}}
+            <label class="form-label" for="name">Name: {{isUpdate.isUpdate}} </label>
+            <div>
+                <input 
+                    class="form-field" 
+                    id="name" 
+                    placeholder="Pet Name" 
+                    type="text" 
+                    required="required"
+                    name="name"
+                    value="{{pet.name}}"
+                />
+            </div>
+          {{else}}
+            <div class="container-media-content">
+              <p class="title is-4">{{pet.name}}</p>
+            </div>
+          {{/if}}
+
+
+          {{#if isUpdate}}
+            <label class="form-label" for="name">Price: </label>
+            <div>
+                <input 
+                    class="form-field" 
+                    id="price" 
+                    placeholder="price" 
+                    type="text" 
+                    required="required"
+                    name="price"
+                    value="{{pet.price}}"
+                />
+            </div>
+          {{else}}
+            <div class="container-media-content">
+              <p class="field">price: ${{pet.price}}</p>
+            </div>
+          {{/if}}
+
+          {{#if isUpdate}}
+            <select class="form-field" id="gender" name="gender">
+              <option value="unknown">Unknown</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          {{else}}
+            <div class="container-media-content">
+              <p class="field">gender: {{pet.gender}}</p>
+            </div>
+          {{/if}}
+            <div class="container-media-content">
+              {{pet.description}}
+            </div>
+
+          {{#if isAdmin}}
+            {{#if isUpdate}}
+              <div class="buttons">
+                <button  class="update-button" type="submit">Update</button>
+                <a class="update-button" href="/pet/{{pet._id}}/detail">Cancel</a>
+              </div>
+            {{else}}
+              <a class="update-button" href="/pet/{{pet._id}}/update">Edit</a>
+            {{/if}}
+          {{/if}}
+        </div>
+      </form>
+    </div>
+{{!-- {{/with}} --}}

@@ -8,18 +8,13 @@
 const express = require('express');
 const User = require('../models/User.model')
 const userRoutes = express.Router();
-
+const { listUser } = require('../controllers')
 // listar todos los usuarios de la colection user
 // GET: /user
-userRoutes.get('/', (req, res) => {
-    // vamos a buscar a todos nuestros usuarios registrados
 
-    User.find()
-    .then(users => {
-        console.log('users: ', users)// { users: users }
-        res.render("user/listUsers", { users } );
-    })
-})
+
+
+userRoutes.get('/', listUser)
 
 // desplegar el formulario para registrar usuarios
 // GET: /user/create
